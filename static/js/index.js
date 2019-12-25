@@ -72,10 +72,14 @@ function start() {
 	console.log('Creating WebRtcPeer and generating local sdp offer ...');
 
 	var constraints = {
-		audio: true,
+		audio: false,
 		video: {
-		  width: 2048,
-		  framerate: 60
+			mandatory : {
+			maxWidth : 2048,
+			minWidth : 720,
+			maxFrameRate : 60,
+			minFrameRate : 15,
+		}
 		}
 	};
 
@@ -83,6 +87,7 @@ function start() {
       localVideo: videoInput,
       remoteVideo: videoOutput,
 	  onicecandidate : onIceCandidate,
+	  resolution: 300,
 	  mediaConstraints: constraints
     }
 
