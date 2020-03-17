@@ -11,7 +11,7 @@
     "express-session": "^1.17.0",
     "kurento-client": "Kurento/kurento-client-js",
     "kurento-module-chroma": "Kurento/kurento-module-chroma-js",
-    "minimist": "^1.1.1",
+    "minimist": "^1.2.2",
     "ws": "^7.1.0"
   },
   "devDependencies": {
